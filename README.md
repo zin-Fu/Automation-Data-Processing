@@ -17,6 +17,7 @@ This project requires the following dependencies:
 - Selenium
 - OpenCV
 - NumPy
+- Requests
 
 You can install the required dependencies by running the following command:
 
