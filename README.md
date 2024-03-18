@@ -1,15 +1,8 @@
 # Data Processing Automation Tool🤖
 
-Aims to provide automated data collection, data augmentation, and data renaming functionalities for deep learning model training.
+Aims to provide automated data collection, data augmentation, and data renaming functionalities for model training.
 
-## File List
-
-1. `crawler_keyword.py`
-2. `crawler_similar.py`
-3. `DataAugment.py`
-4. `rename.py`
-
-## Requirements
+## Requirements❗
 
 This project requires the following dependencies:
 
@@ -25,21 +18,11 @@ You can install the required dependencies by running the following command:
 pip install -r requirements.txt
 ```
 
-## Script Descriptions
-
-1. `crawler_keyword.py` - A script to download images from Google Image Search based on a keyword.
-
-2. `crawler_similar.py` - A script to download images from a given URL.
-
-3. `DataAugment.py` - A script to perform various data augmentation techniques on images, such as flipping, rotating, adding noise, blurring, and adjusting brightness and contrast.
-
-4. `rename.py` - A script to rename all image files in a specified directory with a given prefix and sequential numbers.
-
-## Detail
+## Detail🧐
 
 #### 1. `crawler_keyword.py`
 
-This script is used to download images from Google Image Search. It utilizes the Selenium library to automate browser operations.
+This script utilizes Selenium and Requests libraries to download images from Google Image Search based on a specified keyword.
 
 **Usage:**
 - Enter the keyword for the search
@@ -48,7 +31,7 @@ This script is used to download images from Google Image Search. It utilizes the
 
 #### 2. `crawler_similar.py`
 
-This script is used to download images from a specified URL. It also utilizes the Selenium library to automate browser operations.
+This script is used to download images from a specified URL, also utilizes the Selenium library to automate browser operations.
 
 **Usage:**
 - Enter the URL containing the images to download
