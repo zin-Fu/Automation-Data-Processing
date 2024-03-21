@@ -1,8 +1,10 @@
-# Data Processing Automation Tool🤖
+好的,我会根据你提供的 `split.py` 脚本更新你的 README 文件。以下是更新后的 README:
 
-Aims to provide automated data collection, data augmentation, and data renaming functionalities for model training.
+# Data Processing Automation Tool 🤖
 
-## Requirements❗
+Aims to provide automated data collection, data augmentation, data renaming, and data splitting functionalities for model training.
+
+## Requirements ❗
 
 This project requires the following dependencies:
 
@@ -18,13 +20,14 @@ You can install the required dependencies by running the following command:
 pip install -r requirements.txt
 ```
 
-## Detail🧐
+## Detail 🧐
 
 #### 1. `crawler_keyword.py`
 
 This script utilizes Selenium and Requests libraries to download images from Google Image Search based on a specified keyword.
 
 **Usage:**
+
 - Enter the keyword for the search
 - Enter the number of images to download
 - Enter the directory path to save the images
@@ -34,6 +37,7 @@ This script utilizes Selenium and Requests libraries to download images from Goo
 This script is used to download images from a specified URL, also utilizes the Selenium library to automate browser operations.
 
 **Usage:**
+
 - Enter the URL containing the images to download
 - Enter the number of images to download
 - Enter the directory path to save the images
@@ -43,6 +47,7 @@ This script is used to download images from a specified URL, also utilizes the S
 This script is used to perform data augmentation on images. It provides various data augmentation techniques, such as flipping, rotation, noise addition, Gaussian blurring, brightness and contrast adjustment, affine transformation, and translation.
 
 **Usage:**
+
 - Enter the path containing the original images
 - Select the data augmentation techniques to use, separated by commas (1: Flip, 2: Rotate, 3: Noise, 4: Gaussian blur, 5: Brightness and contrast adjustment, 6: Affine transformation, 7: Translation)
 - The augmented images will be saved in the same directory as the original images
@@ -56,6 +61,17 @@ This script is used to rename all image files in a specified directory.
 - Enter the directory path containing the images to be renamed
 - Enter the new prefix for the image names
 - The script will rename all images and save them in the format `{new_prefix}_{number}.{extension}`
+
+#### 5. `split.py`
+
+This script is used to split the dataset into training and testing sets based on a specified ratio.
+
+**Usage:**
+
+- Provide the paths to the folders containing the images and labels
+- Provide the paths to the folders where the training and testing images and labels will be saved
+- Set the desired split ratio for training and testing sets
+- The script will copy the images and labels to the respective training and testing folders based on the specified ratio
 
 ## License
 
