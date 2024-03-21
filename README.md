@@ -1,8 +1,9 @@
-好的,我会根据你提供的 `split.py` 脚本更新你的 README 文件。以下是更新后的 README:
-
 # Data Processing Automation Tool 🤖
 
 Aims to provide automated data collection, data augmentation, data renaming, and data splitting functionalities for model training.
+
+## Update🤗
+- **3.21:** Added scripts to divide test ＆ train
 
 ## Requirements ❗
 
