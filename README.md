@@ -8,8 +8,9 @@ Aims to provide automated data collection, data augmentation, data renaming, and
 
 ## Update 🤗
 
-- **2024/3/21:** Added scripts to divide test & train.
 - **2024/7/30:** Added a list of scripts written this semester for image/data processing.
+- **2024/3/21:** Added scripts to divide test & train.
+- **2024/3/15:** Created the repo
 
 ## Directory tree🧐
 
