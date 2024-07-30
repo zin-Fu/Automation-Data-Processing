@@ -23,16 +23,14 @@ import os
 import shutil
 import random
 
-# 设置文件夹路径
-labels_folder = "D:\\00study\\比赛\\讯飞智能车\\数据集\\0TOTAL\\0707-big-only\\0707-big-only\\labels"
-images_folder = "D:\\00study\\比赛\\讯飞智能车\\数据集\\0TOTAL\\0707-big-only\\0707-big-only\\images"
+labels_folder = " "
+images_folder = " "
 
-train_images_folder = "D:\\00study\\比赛\\讯飞智能车\\数据集\\0TOTAL\\train\\images"
-train_labels_folder = "D:\\00study\\比赛\\讯飞智能车\\数据集\\0TOTAL\\train\\labels"
-test_images_folder = "D:\\00study\\比赛\\讯飞智能车\\数据集\\0TOTAL\\val\\images"
-test_labels_folder = "D:\\00study\\比赛\\讯飞智能车\\数据集\\0TOTAL\\val\\labels"
+train_images_folder = " "
+train_labels_folder = " "
+test_images_folder = " "
+test_labels_folder = " "
 
-# 确保目标文件夹存在
 if not os.path.exists(train_images_folder):
     os.makedirs(train_images_folder)
 if not os.path.exists(train_labels_folder):
@@ -42,14 +40,13 @@ if not os.path.exists(test_images_folder):
 if not os.path.exists(test_labels_folder):
     os.makedirs(test_labels_folder)
 
-# 划分比例
-split_ratio = 0.8
+split_ratio = 0.8  # Change this to your desired ratio
 
-# 获取图像和标签文件列表
 image_files = [f for f in os.listdir(images_folder) if any(f.endswith(ext) for ext in ['.jpg', '.png'])]
 label_files = [f for f in os.listdir(labels_folder) if f.endswith('.txt')]
 
-# 检查是否有未匹配的图像或标签文件
+# assert set(f[:-4] for f in image_files) == set(f[:-4] for f in label_files)
+# 遍历每一个图片文件，提取文件名（不包含扩展名），构建对应的.txt文件路径，检查.txt文件是否存在
 for image_file in image_files:
     file_name = os.path.splitext(os.path.basename(image_file))[0]
     label_file = os.path.join(labels_folder, file_name + ".txt")
@@ -59,6 +56,7 @@ for image_file in image_files:
         print(f"Deleted {image_file}")
         print(f"{image_file} has no corresponding label file")
 
+# 遍历每一个.txt文件，提取.txt文件的文件名（不包含扩展名），构建对应的图片文件路径，检查图片文件是否存在
 for label_file in label_files:
     file_name = os.path.splitext(label_file)[0]
     image_file = os.path.join(images_folder, file_name + ".jpg")
@@ -69,16 +67,15 @@ for label_file in label_files:
         print(f"{label_file} has no corresponding image file")
 
 assert set(f[:-4] for f in image_files) == set(f[:-4] for f in label_files)
-
-# 打乱文件顺序
+# Shuffle file list
 random.shuffle(image_files)
 
-# 根据比例划分训练集和测试集
+# Split the files into training set and test set based on the specified ratio
 num_train = int(len(image_files) * split_ratio)
 train_files = image_files[:num_train]
 test_files = image_files[num_train:]
 
-# 复制文件到相应的文件夹
+# Copy the files to the corresponding folders
 for file in train_files:
     shutil.copy(os.path.join(images_folder, file), train_images_folder)
     shutil.copy(os.path.join(labels_folder, file[:-4] + '.txt'), train_labels_folder)
