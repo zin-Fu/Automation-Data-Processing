@@ -2,77 +2,58 @@
 
 Aims to provide automated data collection, data augmentation, data renaming, and data splitting functionalities for model training.
 
-## Update🤗
-- **3.21:** Added scripts to divide test ＆ train
+这个repo放的是我平常写的一些数据处理脚本，希望能对你有所帮助。
 
-## Requirements ❗
+每个脚本里都有详细的注释，介绍其功能、参数用法和一些注意事项。
 
-This project requires the following dependencies:
+## Update 🤗
 
-- Python 3.x
-- Selenium
-- OpenCV
-- NumPy
-- Requests
+- **2024/3/21:** Added scripts to divide test & train.
+- **2024/7/30:** Added a list of scripts written this semester for image/data processing.
 
-You can install the required dependencies by running the following command:
+## Directory tree🧐
 
 ```
-pip install -r requirements.txt
+    其他/
+        PDF 转 JPG .py
+        批量计算文件大小.py
+        移动指定天数前的文件.py
+    图像处理和数据增强/
+        图像转视频.py
+        批量JPG转PNG.py
+        批量PNG 转 JPG.py
+        批量图像暖化(调色温).py
+        批量调整图像亮度.py
+        批量调整图像分辨率.py
+        批量调整图像的曝光度.py
+        数据增强.py
+    数据集处理/
+        yolo格式训练集和测试集划分.py
+        分离同一文本和图像到指定文件夹.py
+        删除txt第一位不是指定数字的txt文件和同一个文件夹下的jpg.py
+        删除指定文件夹中的JSON文件.py
+        删除空白的TXT文件.py
+        图片文件夹归类.py
+        复制匹配的文本文件.py
+        检查并删除没有匹配文件的JPG和XML.py
+        检查训练集，测试集label和img是否一一对应.py
+        移动没有对应标签的图片.py
+        获取image路径，写进txt文件.py
+        遍历jpg，删除无对应txt的文件.py
+        遍历txt，删除没有对应jpg的文件.py
+    文件命名处理/
+        批量图片重命名.py
+        文件名空格替换为下划线.py
+    标签格式转换与处理yolo/
+        XML转YOLO格式批量转换.py
+        YOLO标注转VOC标注.py
+        修复XML文件中的标签闭合.py
+    爬虫/
+        谷歌图片关键词抓取.py
+        谷歌相似图片抓取.py
+    视频处理/
+        视频帧提取.py
 ```
-
-## Detail 🧐
-
-#### 1. `crawler_keyword.py`
-
-This script utilizes Selenium and Requests libraries to download images from Google Image Search based on a specified keyword.
-
-**Usage:**
-
-- Enter the keyword for the search
-- Enter the number of images to download
-- Enter the directory path to save the images
-
-#### 2. `crawler_similar.py`
-
-This script is used to download images from a specified URL, also utilizes the Selenium library to automate browser operations.
-
-**Usage:**
-
-- Enter the URL containing the images to download
-- Enter the number of images to download
-- Enter the directory path to save the images
-
-#### 3. `DataAugment.py`
-
-This script is used to perform data augmentation on images. It provides various data augmentation techniques, such as flipping, rotation, noise addition, Gaussian blurring, brightness and contrast adjustment, affine transformation, and translation.
-
-**Usage:**
-
-- Enter the path containing the original images
-- Select the data augmentation techniques to use, separated by commas (1: Flip, 2: Rotate, 3: Noise, 4: Gaussian blur, 5: Brightness and contrast adjustment, 6: Affine transformation, 7: Translation)
-- The augmented images will be saved in the same directory as the original images
-
-#### 4. `rename.py`
-
-This script is used to rename all image files in a specified directory.
-
-**Usage:**
-
-- Enter the directory path containing the images to be renamed
-- Enter the new prefix for the image names
-- The script will rename all images and save them in the format `{new_prefix}_{number}.{extension}`
-
-#### 5. `split.py`
-
-This script is used to split the dataset into training and testing sets based on a specified ratio.
-
-**Usage:**
-
-- Provide the paths to the folders containing the images and labels
-- Provide the paths to the folders where the training and testing images and labels will be saved
-- Set the desired split ratio for training and testing sets
-- The script will copy the images and labels to the respective training and testing folders based on the specified ratio
 
 ## License
 
