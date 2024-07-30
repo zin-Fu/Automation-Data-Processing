@@ -1,6 +1,6 @@
 # Data Processing Automation Tool 🤖
 
-🚀Aims to provide automated data collection, data augmentation, data renaming, and data splitting functionalities for model training.🚀
+**_🚀Aims to provide automated data collection, data augmentation, data renaming, and data splitting functionalities for model training.🚀_**
 
 This repo contains some of the data processing scripts I usually write. Hope it will help you.
 Each script has detailed comments describing its functionality, parameter usage, and considerations.
