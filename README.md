@@ -2,10 +2,12 @@
 
 **_🚀Aims to provide scripts for image processing, data augmentation, dataset handling, file renaming, label format conversion, and web crawling to facilitate various data processing needs.🚀_**
 
-This repo contains some of the data processing scripts I usually write. Hope it will help you.
+This repo contains some of the data processing scripts I write. Hope it'll help you.
+
 Each script has detailed comments describing its functionality, parameter usage, and considerations.
 
 这个repo放的是我平常写的一些数据处理脚本，希望能对你有所帮助。
+
 每个脚本里都有详细的注释，介绍其功能、参数用法和一些注意事项。
 
 ## Update 🤗
