@@ -12,6 +12,7 @@ Each script has detailed comments describing its functionality, parameter usage,
 
 ## Update 🤗
 
+- **2024/9/19:** Added a Web content crawler file.
 - **2024/7/30:** Added a list of scripts written this semester for image/data processing.
 - **2024/3/21:** Added scripts to divide test & train.
 - **2024/3/15:** Created the repo
@@ -56,7 +57,8 @@ Each script has detailed comments describing its functionality, parameter usage,
 │   └── 修复XML文件中的标签闭合.py (Fix Label Closure in XML Files)
 ├── 爬虫 (Web Crawling)
 │   ├── 谷歌图片关键词抓取.py (Google Image Keyword Scraping)
-│   └── 谷歌相似图片抓取.py (Google Similar Image Scraping)
+│   ├── 谷歌相似图片抓取.py (Google Similar Image Scraping)
+|   └── fetch_and_save_article.py(从指定的 URL 获取网页内容并将其保存为txt文件)
 └── 视频处理 (Video Processing)
     └── 视频帧提取.py (Extract Video Frames)
 
